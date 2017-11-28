@@ -60,5 +60,5 @@ typings/
 # sass cache dictionaries
 .sass-cache/
 
-# Picture files
-Pictures/
+# Project files
+Project/

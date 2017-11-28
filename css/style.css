@@ -1,0 +1,18 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0; }
+  body .container {
+    margin: 0 auto;
+    max-width: 600px; }
+
+.header {
+  background-color: grey;
+  background-image: url("Pictures/header.JPG");
+  background-position: center;
+  background-size: cover;
+  height: 600px; }
+  .header .container h1, .header .container p {
+    text-transform: uppercase;
+    color: white; }
+
+/*# sourceMappingURL=style.css.map */
