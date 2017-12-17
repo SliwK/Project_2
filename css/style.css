@@ -7,13 +7,11 @@ body {
 .container {
   margin: 0 auto;
   max-width: 600px;
+  position: relative;
   text-align: center; }
 
 .border {
-  border-left: solid 1px black;
-  border-right: solid 1px black;
-  border-bottom: solid 1px black;
-  border-top: solid 1px black; }
+  border: solid 1px black; }
   @media (max-width: 768px) {
     .border {
       border: none; } }
@@ -24,7 +22,7 @@ h2 {
   margin: 0 auto;
   position: relative;
   text-transform: uppercase;
-  top: -35px;
+  top: -15px;
   width: 250px;
   z-index: 1; }
 
@@ -41,7 +39,6 @@ h2 {
     font-size: 45px;
     letter-spacing: 4px; }
   .header .container {
-    position: relative;
     top: 150px; }
     @media (max-width: 768px) {
       .header .container {
@@ -50,55 +47,40 @@ h2 {
     position: relative;
     top: 180px; }
 
+.sub-title, .about .container h2, .services h2, .whatwedo h2, .contact .container h2 {
+  font-size: 25px;
+  font-weight: bold; }
+
+.sub-text, .about .container p, .services p, .whatwedo p, .contact .container p {
+  letter-spacing: normal;
+  text-transform: none; }
+
 .about {
-  height: 350px;
+  padding: 60px 0;
   margin: 5px 0; }
-  .about .container {
-    position: relative;
-    top: 60px; }
-    .about .container h2 {
-      font-size: 25px;
-      font-weight: bold; }
-    .about .container p {
-      letter-spacing: normal;
-      text-transform: none; }
 
 .services {
   background-image: url("../Pictures/services.JPG");
   background-position: center;
   background-size: cover;
-  height: 350px;
+  padding: 60px 0;
   margin: 5px 0; }
   .services h2 {
     background-image: url("../Pictures/services.JPG");
-    background-position: center;
-    font-size: 25px;
-    font-weight: bold; }
+    background-position: center; }
   .services h2, .services p {
     color: white; }
-  .services p {
-    letter-spacing: normal;
-    text-transform: none; }
   .services .container {
-    border-color: white;
-    position: relative;
-    top: 90px; }
+    border-color: white; }
 
 .whatwedo {
-  height: 900px; }
-  .whatwedo h2 {
-    font-size: 25px;
-    font-weight: bold; }
-  .whatwedo p {
-    letter-spacing: normal;
-    text-transform: none; }
+  padding: 60px 0; }
   .whatwedo h3 {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase; }
-  .whatwedo .container {
-    position: relative;
-    top: 70px; }
+  .whatwedo .product-management {
+    padding-bottom: 40px; }
 
 .tiles .row {
   display: block;
@@ -109,12 +91,12 @@ h2 {
   height: 200px; }
   @media (max-width: 768px) {
     .tiles [class*="col-"] {
-      margin: 2px 0 2px 0; } }
-.tiles [class*="col-lg-6"] {
+      margin: 2px 0; } }
+.tiles [class$="lg-6"] {
   border-left: solid 4px white;
   border-right: solid 4px white; }
   @media (max-width: 768px) {
-    .tiles [class*="col-lg-6"] {
+    .tiles [class$="lg-6"] {
       border: none; } }
 .tiles h3 {
   color: white;
@@ -125,31 +107,22 @@ h2 {
   text-transform: uppercase;
   top: 110px; }
 .tiles .img1 {
-  background-image: url("../Pictures/pic5.JPG"); }
-.tiles .img2 {
-  background-image: url("../Pictures/pic6.JPG"); }
-.tiles .img3 {
-  background-image: url("../Pictures/pic4.JPG"); }
-.tiles .img4 {
   background-image: url("../Pictures/pic1.JPG"); }
-.tiles .img5 {
+.tiles .img2 {
   background-image: url("../Pictures/pic2.JPG"); }
-.tiles .img6 {
+.tiles .img3 {
   background-image: url("../Pictures/pic3.JPG"); }
+.tiles .img4 {
+  background-image: url("../Pictures/pic4.JPG"); }
+.tiles .img5 {
+  background-image: url("../Pictures/pic5.JPG"); }
+.tiles .img6 {
+  background-image: url("../Pictures/pic6.JPG"); }
 
 .contact {
-  height: 300px; }
+  padding: 60px 0; }
   .contact .container {
-    position: relative;
-    padding-bottom: 20px;
-    position: relative;
-    top: 70px; }
-    .contact .container h2 {
-      font-size: 25px;
-      font-weight: bold; }
-    .contact .container p {
-      letter-spacing: normal;
-      text-transform: none; }
+    padding-bottom: 20px; }
     .contact .container button {
       color: white;
       border: none;

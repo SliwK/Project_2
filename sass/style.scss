@@ -1,3 +1,4 @@
+$font-color: white;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -10,14 +11,12 @@ body {
 .container {
     margin: 0 auto;
     max-width: 600px;
+      position: relative;
     text-align: center;
 }
 
 .border {
-		border-left: solid 1px black;
-		border-right: solid 1px black;
-		border-bottom: solid 1px black;
-		border-top: solid 1px black;
+		border: solid 1px black;
 		@media (max-width: 768px) {
 				border: none;
 		}
@@ -29,7 +28,7 @@ h2 {
 	margin: 0 auto;
 	position: relative;
 	text-transform: uppercase;
-	top: -35px;
+	top: -15px;
 	width: 250px;
 	z-index: 1;
 
@@ -44,7 +43,7 @@ h2 {
   height: 800px;
   padding: 5px 0;
   h1, p {
-        color: white;
+        color: $font-color;
         text-transform: uppercase;
       }
   h1 {
@@ -52,7 +51,6 @@ h2 {
 			letter-spacing: 4px;
   }
   .container {
-    position: relative;
     top: 150px;
 		@media (max-width: 768px) {
 			top: 75px;
@@ -64,21 +62,26 @@ h2 {
 	}
 }
 
+.sub-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sub-text {
+  letter-spacing: normal;
+  text-transform: none;
+}
 //ABOUT
 
 .about {
-  height: 350px;
+  padding: 60px 0;
   margin: 5px 0;
   .container{
-			position: relative;
-			top: 60px;
 			h2{
-				font-size: 25px;
-				font-weight: bold;
+          @extend .sub-title;
 			}
 			p {
-				letter-spacing: normal;
-				text-transform: none;
+          @extend .sub-text;
 			}
   }
 }
@@ -89,47 +92,42 @@ h2 {
   background-image: url("../Pictures/services.JPG");
   background-position: center;
   background-size: cover;
-  height: 350px;
+  padding: 60px 0;
   margin: 5px 0;
 	h2{
-	//	background-color: rgba(0,0,0,0);
+    @extend .sub-title;
 		background-image: url("../Pictures/services.JPG");
 		background-position: center;
-		font-size: 25px;
-		font-weight: bold;
 	}
   h2, p {
-    color: white;
+    color: $font-color;
   }
 	p {
-		letter-spacing: normal;
-		text-transform: none;
+      @extend .sub-text;
 	}
   .container {
 		border-color: white;
-		position: relative;
-    top: 90px;
   }
 }
 
+
+//WHAT WE DO
+
 .whatwedo {
-  height: 900px;
+  padding: 60px 0;
 	h2{
-		font-size: 25px;
-		font-weight: bold;
+      @extend .sub-title;
 	}
 	p {
-		letter-spacing: normal;
-		text-transform: none;
+      @extend .sub-text;
 	}
   h3 {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
   }
-  .container {
-		position: relative;
-    top: 70px;
+  .product-management {
+    padding-bottom: 40px;
   }
 }
 
@@ -145,10 +143,10 @@ h2 {
 		background-size: cover;
 		height: 200px;
 		@media (max-width: 768px) {
-			margin: 2px 0 2px 0;
+			margin: 2px 0;
 		}
 	}
-  [class*="col-lg-6"] {
+  [class$="lg-6"] {
     border-left: solid 4px white;
     border-right: solid 4px white;
     @media (max-width: 768px) {
@@ -156,7 +154,7 @@ h2 {
     }
   }
 	h3 {
-		color: white;
+		color: $font-color;
 		font-weight: bold;
 		letter-spacing: 2px;
 		padding-left: 15px;
@@ -165,45 +163,27 @@ h2 {
     top: 110px;
 	}
 
-	.img1{
-		background-image: url("../Pictures/pic5.JPG");
-	}
-	.img2{
-		background-image: url("../Pictures/pic6.JPG");
-	}
-	.img3{
-		background-image: url("../Pictures/pic4.JPG");
-	}
-	.img4{
-		background-image: url("../Pictures/pic1.JPG");
-	}
-	.img5{
-		background-image: url("../Pictures/pic2.JPG");
-	}
-	.img6{
-		background-image: url("../Pictures/pic3.JPG");
-	}
+  @for $i from 1 through 6 {
+    .img#{$i} {
+      background-image: url("../Pictures/pic#{$i}.JPG");
+    }
+  }
 }
 
 //CONTACT
 
 .contact {
-	height: 300px;
+  padding: 60px 0;
 	.container {
-		position: relative;
 			padding-bottom: 20px;
 			h2{
-				font-size: 25px;
-				font-weight: bold;
+        @extend .sub-title;
 			}
 			p {
-				letter-spacing: normal;
-				text-transform: none;
+          @extend .sub-text;
 			}
-		position: relative;
-		top: 70px;
 	button {
-		color: white;
+		color: $font-color;
 		border: none;
 		background-color: black;
 		height: 50px;
